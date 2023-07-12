@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal-popup</title>
+</head>
+<style>
+   #modal{
+        border: 1px solid red;
+        width: 50%;
+        height: 300px;
+        color: blueviolet;
+        margin-top: 20px;
+        opacity: 0;
+        pointer-events: none;
+        
+    }
+
+    #modal.show{
+        opacity :1;
+        pointer-events: auto;
+    }
+</style>
+<body>
+    <div id="openplz">
+        <button id="open_mdl">open</button>
+    </div>
+
+    <!-- // makingmodel of container -->
+    <div id="modal">
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Sunt non ducimus nam assumenda consectetur at asperiores eius quae exercitationem odit!</h1>
+             <button id="close_mdl">close</button>
+    </div>
+    
+</body>
+<script>
+    let open_mdl = document.getElementById("open_mdl")
+    
+    let modal = document.getElementById("modal")
+    
+    let close_mdl = document.getElementById("close_mdl")
+    
+
+    open_mdl.addEventListener("click",()=>{
+        modal.classList.add("show")
+    })
+
+    close_mdl.addEventListener("click", ()=>{
+        modal.classList.remove("show")
+    })
+
+
+</script>
+</html>
